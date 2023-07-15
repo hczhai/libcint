@@ -261,7 +261,7 @@ static double g_trans_cart2sph[] = {
         -0.473087347878780002,
         0,
         0,
-        0,
+        -0.473087347878780002,
         0,
         2.838524087272680054,
         0,
@@ -3868,6 +3868,7 @@ static double *g_ket_cart2spheric(double *gsph, double *gcart,
         }
         for (i = 0; i < nbra; i++) {
                 gsph[6*lds+i] = coeff_c2s[ 90] * gcart[ 0*nbra+i]
+                              + coeff_c2s[ 93] * gcart[ 3*nbra+i]
                               + coeff_c2s[ 95] * gcart[ 5*nbra+i]
                               + coeff_c2s[100] * gcart[10*nbra+i]
                               + coeff_c2s[102] * gcart[12*nbra+i];
